@@ -1,0 +1,525 @@
+i {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #FAEBD7;
+}
+
+.topic h3 {
+    font-size: 28px;
+    color: #5805aa;
+}
+
+
+/* 头部header start */
+
+.header {
+    background-color: #4b491f;
+    margin-top: 10px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.header .name {
+    color: white;
+    line-height: 104px;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.header .letter {
+    background: url(../images/背景一.jpg) no-repeat 0px -450px;
+}
+
+.cdut div {
+    display: inline-block;
+    font-size: 100px;
+    text-align: center;
+}
+
+.cdut div:nth-child(1) {
+    color: white;
+}
+
+.cdut div:nth-child(2) {
+    color: red;
+}
+
+.cdut div:nth-child(3) {
+    color: yellow;
+}
+
+.cdut div:nth-child(4) {
+    color: pink;
+}
+
+.focus {
+    height: 372px;
+    background-color: #FFCCCC;
+}
+
+.focus .card-stack {
+    position: relative;
+    height: 350px;
+}
+
+.focus .card-stack .buttons {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.46);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    left: 0;
+    top: 55%;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 22px;
+    z-index: 100;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.focus .card-stack .buttons:hover {
+    transform: scale(1.3, 1.3);
+}
+
+.focus .card-stack .prev {
+    left: 15px;
+    right: auto;
+}
+
+.focus .card-stack .next {
+    left: auto;
+    right: 15px;
+}
+
+.focus .card-stack .carousel .buttons:hover {
+    color: #C01313;
+    background: #fff;
+}
+
+.focus .card-stack .card-list {
+    width: 300px;
+}
+
+.focus .card-stack .card-list__image {
+    height: 200px;
+}
+
+.focus .card-stack .card-list__text {
+    color: #fff;
+    font-weight: 300;
+}
+
+.focus .card-stack .card-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 100ms ease-in-out;
+    border-radius: 10px;
+    position: absolute;
+    list-style: none;
+    height: 300px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 15px 1px rgba(225, 225, 225, 0.5);
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+.focus .card-stack .card-list li:nth-child(1) {
+    top: 24px;
+    width: 60%;
+    /* animation: scaleCard 100ms; */
+}
+
+.focus .card-stack .card-list li:nth-child(2) {
+    top: 36px;
+    width: 70%;
+}
+
+.focus .card-stack .card-list li:nth-child(3) {
+    top: 48px;
+    width: 80%;
+}
+
+.focus .card-stack .card-list li:nth-child(4) {
+    top: 60px;
+    width: 90%;
+}
+
+.focus .card-stack .card-list li:nth-child(5) {
+    top: 72px;
+    width: 100%;
+}
+
+.focus .card {
+    cursor: pointer;
+}
+
+.focus .card-stack:hover>.buttons.prev {
+    display: block;
+    animation: 200ms;
+}
+
+.focus .card-stack:hover>.buttons.next {
+    display: block;
+    animation: bounceInRight 200ms;
+}
+
+.transformThis {
+    animation: scaleDown 500ms;
+}
+
+.transformPrev {
+    animation: scaleUp 100ms;
+    display: none;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1.2) translateY(50px);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(1.15) translateY(40px);
+        opacity: 0.1;
+    }
+    40% {
+        transform: scale(1.1) translateY(30px);
+        opacity: 0.2;
+    }
+    60% {
+        transform: scale(1.05) translateY(20px);
+        opacity: 0.4;
+    }
+    80% {
+        transform: scale(1.01) translateY(10px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(1.01) translateY(20px);
+        opacity: 0.8;
+    }
+    40% {
+        transform: scale(1.05) translateY(40px);
+        opacity: 0.4;
+    }
+    60% {
+        transform: scale(1.1) translateY(60px);
+        opacity: 0.2;
+    }
+    80% {
+        transform: scale(1.15) translateY(80px);
+        opacity: 0.1;
+    }
+    100% {
+        transform: scale(1.2) translateY(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes scaleCard {
+    0% {
+        top: 5px;
+    }
+    100% {
+        top: 24px;
+    }
+}
+
+@keyframes bounceInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.introduction {
+    margin-top: 50px;
+    background: #a1a1e9;
+}
+
+.introduction_title {
+    text-align: center;
+    margin-top: 15px;
+    color: #C01313;
+    font-size: 30px;
+}
+
+.introduction p {
+    color: #e9e90a;
+    text-indent: 36px;
+}
+
+
+/* history start */
+
+.history_title {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #ec8989;
+    color: white;
+}
+
+.history img {
+    width: 100%;
+}
+
+
+/* subject start */
+
+.subject {
+    margin-top: 15px;
+    background: #99CCCC;
+}
+
+.subject p {
+    color: #e90a6a;
+    text-indent: 36px;
+}
+
+.subject_title,
+.important_subject {
+    text-align: center;
+    margin-top: 15px;
+    color: #2708ff;
+    font-size: 30px;
+}
+
+.subject2 table {
+    margin: 0 auto;
+}
+
+
+/* view start */
+
+.view_body {
+    padding: 0!important;
+    background: #fff url(https://img.fishfay.com/theme/images/antacom/area/antakids-bg-01.png) repeat;
+}
+
+.view_title {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #dada04;
+    color: #c0ffff;
+}
+
+
+/* 瀑布流 */
+
+img.thumb {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.white-panel {
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+
+/* school_life start  */
+
+.school_life {
+    margin-top: 15px;
+}
+
+.school_life_title {
+    background-color: #FF9999;
+    text-align: center;
+    margin-top: 15px;
+    color: #62ff9e;
+    font-size: 30px;
+}
+
+.school_life .food1 {
+    height: 185px;
+    font-size: 25px;
+    color: #e90a6a;
+    text-align: center;
+    line-height: 185px;
+}
+
+.canteen {
+    height: 185px;
+    overflow: hidden;
+    background-color: pink;
+}
+
+.canteen div {
+    text-align: center;
+    color: #2708ff;
+}
+
+.school_life img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.delicious_food {
+    height: 197px;
+    overflow: hidden;
+    background-color: #993366;
+}
+
+.food2 {
+    height: 100%;
+    line-height: 197px;
+    font-size: 25px;
+    color: #CCFF66!important;
+}
+
+.delicious_food div {
+    text-align: center;
+    color: #2708ff;
+}
+
+.text {
+    background-color: #f8d7dd;
+    font-size: 18px;
+    text-indent: 36px;
+    color: #6a6398;
+}
+
+.text_title {
+    background-color: #5c33d0;
+    font-size: 24px;
+    text-align: center;
+    color: #c3bfdb;
+}
+
+
+/* footer start */
+
+.footer {
+    position: relative;
+    height: 315px;
+    background: url(../images/背景2.png) no-repeat #410000;
+    margin-top: 30px;
+}
+
+.footer .logo {
+    margin-top: 150px;
+}
+
+.footer .platform {
+    margin-top: 90px;
+}
+
+.platform .row {
+    border-bottom: 1px solid white;
+}
+
+.footer .platform li {
+    text-align: center;
+}
+
+.location {
+    margin-top: 10px;
+    color: white;
+}
+
+
+/* 小火箭 */
+
+.xhj {
+    display: none;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 150px;
+    height: 250px;
+    background: url(../images/小火箭.png) no-repeat;
+    cursor: pointer;
+}
+
+.fly {
+    animation: fly 1.5s steps(4) backwards;
+}
+
+@keyframes fly {
+    0% {
+        background-position: -149px 0;
+    }
+    100% {
+        background-position: -743px 0;
+    }
+}
+
+
+/* 电梯导航 */
+
+.fixedtool {
+    display: none;
+    background-color: pink;
+    position: fixed;
+    top: 470px;
+    left: 50%;
+    margin-left: -700px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fixedtool ul {
+    padding-left: 0;
+}
+
+.fixedtool a {
+    display: block;
+    width: 67px;
+    height: 30px;
+    border-bottom: 2px solid #ededed;
+    line-height: 30px;
+    text-align: center;
+}
+
+.fixedtool a:hover {
+    background-color: #c81623;
+    color: #ffffff;
+    text-decoration: none;
+}
