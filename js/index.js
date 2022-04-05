@@ -95,8 +95,8 @@ $(function() {
         click: function() {
             $(this).addClass("fly");
             $("html,body").stop().animate({ scrollTop: 0 }, 1000);
-            $(this).stop().animate({ bottom: "1000px" }, 2000, function() {
-                $(".xhj").css({ "bottom": "10px", display: "none" });
+            $(this).stop().animate({ bottom: "10rem" }, 2000, function() {
+                $(".xhj").css({ "bottom": ".1rem", display: "none" });
                 $(".xhj").removeClass("fly");
             });
         }
